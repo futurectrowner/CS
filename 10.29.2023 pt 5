@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+   int vecLength;
+   int numMatches;
+   unsigned int i;
+
+   cin >> vecLength;
+
+   // Creates a vector of size vecLength and initializes all values to 0
+   vector<int> hourlyPrices(vecLength);
+
+   for (i = 0; i < hourlyPrices.size(); ++i) {
+      cin >>  hourlyPrices.at(i);
+   }
+      numMatches = 0;
+  for (i=0; i < hourlyPrices.size(); ++i){
+     if (hourlyPrices.at(i) == 7){
+        numMatches= numMatches +1;
+     }
+  }
+        
+
+   cout << "Number of 7s in array: " << numMatches << endl;
+   
+   return 0;
+}
+

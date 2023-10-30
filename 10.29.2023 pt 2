@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+   int numStudents;
+   unsigned int i;
+
+   cin >> numStudents;
+   vector<int> bikingLogs(numStudents);
+
+   for (i = 0; i < bikingLogs.size(); ++i) {
+      cin >> bikingLogs.at(i);
+   }
+
+  for (i = 0 ; i < bikingLogs.size(); ++i){
+     if (bikingLogs.at(i) % 2 != 0){
+        cout << bikingLogs.at(i) << endl;
+     }
+  }
+
+   return 0;
+}
+

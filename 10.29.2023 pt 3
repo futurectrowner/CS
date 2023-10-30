@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+   int numPeople;
+   int i;
+
+   cin >> numPeople;
+   vector<int> runningRoster(numPeople);
+
+   for (i = 0; i < runningRoster.size(); ++i) {
+      cin >> runningRoster.at(i);
+   }
+
+   for (i = 0; i < runningRoster.size(); ++i){
+      runningRoster.at(i) = runningRoster.at(i) +1;
+      cout << runningRoster.at(i) << "+" ;
+   }
+
+   return 0;
+}
