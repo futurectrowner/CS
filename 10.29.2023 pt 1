@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+   int numDistance;
+   int firstDistance;
+	int middleDistance;
+   int lastDistance;
+   unsigned int i;
+
+   cin >> numDistance;
+   cin >> firstDistance;
+	cin >> middleDistance;
+   cin >> lastDistance;
+
+   vector <int> idListings (numDistance);
+   
+   idListings.at(0) = firstDistance;
+   idListings.at(numDistance - 1) = lastDistance;
+   idListings.at( idListings.size() / 2) = middleDistance;
+
+   for (i = 0; i < idListings.size(); ++i) {
+      cout << idListings.at(i) << " ";
+   }
+   cout << endl;
+
+   return 0;
+}
+
